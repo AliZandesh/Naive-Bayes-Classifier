@@ -1,0 +1,229 @@
+Naïve Bayes algorithm is a supervised learning algorithm, which is based on Bayes theorem and used for solving classification problems.
+
+Naïve Bayes Classifier is one of the simple and most effective Classification algorithms which helps in building the fast machine learning models that can make quick predictions.
+
+It is mainly used in text classification that includes a high-dimensional training dataset.
+
+It is a probabilistic classifier, which means it predicts on the basis of the probability of an object.
+
+Some popular examples of Naïve Bayes Algorithm are spam filtration, Sentimental analysis, and classifying articles.
+
+The Naïve Bayes algorithm is comprised of two words Naïve and Bayes, Which can be described as:
+
+Naïve: It is called Naïve because it assumes that the occurrence of a certain feature is independent of the occurrence of other features. 
+Such as if the fruit is identified on the bases of color, shape, and taste, then red, spherical, and sweet fruit is recognized as an apple. 
+Hence each feature individually contributes to identify that it is an apple without depending on each other.
+
+Bayes: It is called Bayes because it depends on the principle of Bayes' Theorem.
+Bayes' theorem is also known as Bayes' Rule or Bayes' law, which is used to determine the probability of a hypothesis with prior knowledge. 
+It depends on the conditional probability.
+
+Suppose we have a dataset of weather conditions and corresponding target variable "Play"
+
+*******************************************************************************************
+
+Advantages of Naïve Bayes Classifier:
+
+1- Naïve Bayes is one of the fast and easy ML algorithms to predict a class of datasets.
+2- It can be used for Binary as well as Multi-class Classifications.
+3- It performs well in Multi-class predictions as compared to the other Algorithms.
+4- It is the most popular choice for text classification problems.
+5- This algorithm is fast and easy to use and helps in predicting the class of a dataset very quickly.
+6- You can easily solve multiclass prediction problems as it's quite useful.
+7- As compared to other models with independent features, the Naive Bayes classifier performs better with less training data.
+8- The Naive Bayes algorithm performs exceptionally well with categorical input variables.
+9- Using this method, you can predict the class of test data easily and quickly. It also performs well when predicting multiple classes at once.
+10- When the assumption of independence is true, Naive Bayes classifiers outperform logistic regression.
+11- For categorical variables, it performs well compared to numerical input variables. When dealing with numerical input variables, the bell curve is assumed.
+
+*******************************************************************************************
+
+Disadvantages of Naïve Bayes Classifier:
+
+1- Naive Bayes assumes that all features are independent or unrelated, so it cannot learn the relationship between features.
+2- It is impossible for the Naive Bayes model to make any predictions if your test data set contains a categorical variable that was not present in your training dataset. A smoothing technique known as Zero Frequency can solve this problem.
+3- In addition to being a lousy estimation algorithm, 'predict_proba' also computes probability outputs.
+4- While in theory, it sounds great, you'll not find many independent features in real life.
+5- Consequently, the model fails to predict if it assigns a zero (zero) probability to the categorical variable (in the test data set) that it did not observe in the training data set. In this case, we are dealing with "Zero Frequency". This is accomplished by using Laplace estimation, one of the simplest smoothing techniques.
+6- Alternatively, Naive Bayes is a poor estimator, so we shouldn't take too much advantage of the results from predict_proba.
+7- Naive Bayes suffers from another limitation in that it assumes independent predictors. In reality, independent predictors are almost impossible to obtain in practice.
+
+*******************************************************************************************
+
+Applications of Naïve Bayes Classifier:
+It is used for Credit Scoring.
+It is used in medical data classification.
+It can be used in real-time predictions because Naïve Bayes Classifier is an eager learner.
+It is used in Text classification such as Spam filtering and Sentiment analysis.
+
+*******************************************************************************************
+
+Types of Naïve Bayes Model:
+There are three types of Naive Bayes Model, which are given below:
+
+1- Gaussian: The Gaussian model assumes that features follow a normal distribution. 
+This means if predictors take continuous values instead of discrete, then the model assumes that these values are sampled from the Gaussian distribution.
+
+2- Multinomial: The Multinomial Naïve Bayes classifier is used when the data is multinomial distributed. 
+It is primarily used for document classification problems, it means a particular document belongs to which category such as Sports, Politics, education, etc.
+The classifier uses the frequency of words for the predictors.
+
+3- Bernoulli: The Bernoulli classifier works similar to the Multinomial classifier, but the predictor variables are the independent Booleans variables. 
+Such as if a particular word is present or not in a document. 
+This model is also famous for document classification tasks.
+
+*******************************************************************************************
+
+Steps to implement:
+
+1- Data Pre-processing step
+2- Fitting Naive Bayes to the Training set
+3- Predicting the test result
+4- Test accuracy of the result(Creation of Confusion matrix)
+5- Visualizing the test set result.
+
+*******************************************************************************************
+
+Bayes theorem is used to find the probability of a hypothesis with given evidence. 
+
+conditional probability | naive bayes algorithm
+
+P(A | B): In this equation, using Bayes theorem, we can find the probability of A, given that B occurred. A is the hypothesis, and B is the evidence.
+
+P(B|A) is the probability of B given that A is True.
+
+P(A) and P(B) are the independent probabilities of A and B.
+
+*******************************************************************************************
+
+According to the search results, the Naive Bayes algorithm is not affected by feature scaling, including standardization
+
+Therefore, the implementation of the Naive Bayes algorithm with a multinomial classifier in the previous code snippet does not require standardization.
+
+However, it is worth noting that some machine learning algorithms, such as SVM, KNN, and neural networks, are affected by feature scaling and may require standardization or normalization to improve their performance
+
+*******************************************************************************************
+
+The Multinomial Naive Bayes classifier is preferred for text classification problems in Natural Language Processing (NLP) with discrete features such as word frequency count
+
+In some cases, standardization may not have a significant impact on the accuracy of the Naive Bayes algorithm, as the probabilities and classification results remain the same
+
+Naive Bayes classifiers have been heavily used for text classification and text analysis machine learning problems.
+
+Text Analysis is a major application field for machine learning algorithms. 
+However the raw data, a sequence of symbols (i.e. strings) cannot be fed directly to the algorithms themselves as most of them expect numerical feature vectors with a fixed size rather than the raw text documents with variable length.
+
+We’ll take a look at one natural language processing technique for text classification called Naive Bayes.
+
+*******************************************************************************************
+
+There are four types of Naive Bayes models, each with its own assumptions and use cases. Here is an explanation of each type with an example:
+
+Gaussian Naive Bayes:
+This model is used when the predictors take up a continuous value and are not discrete. 
+It assumes that these values are sampled from a Gaussian distribution. 
+For example, it can be used to classify whether an email is spam or not based on the frequency of certain words in the email.
+
+Multinomial Naive Bayes:
+This model is mostly used for document classification problems, such as whether a document belongs to the category of sports, politics, technology, etc. 
+The features/predictors used by the classifier are the frequency of the words present in the document. 
+For example, it can be used to classify whether a news article is about sports or politics based on the frequency of certain words in the article.
+
+Bernoulli Naive Bayes:
+This model is similar to the Multinomial Naive Bayes, but the predictors are boolean variables. 
+The parameters that we use to predict the class variable take up only values yes or no. 
+For example, if a word occurs in the text or not. 
+For example, it can be used to classify whether a customer will buy a product or not based on the presence or absence of certain features.
+
+Optimal Naive Bayes:
+This model selects the class that has the greatest posterior probability of happening. 
+It is optimal, but it will go through all the possibilities, which is very slow. 
+For example, it can be used to classify whether a person has a disease or not based on the presence or absence of certain symptoms.
+
+*******************************************************************************************
+zero probabilities:
+
+The zero probabilities problem in Naive Bayes is a situation where a feature in the testing set has a value that was not observed in the training set.
+
+This can cause the probability of that feature given the class label to be zero, which will cause the overall probability of the class label to be zero as well.
+
+This can lead to incorrect predictions, as the model will assign a probability of zero to a class label that may actually be the correct label.
+
+The zero probabilities problem can occur in both discrete and continuous data, and it can be solved by applying smoothing techniques such as Laplace smoothing.
+
+
+
+*******************************************************************************************
+
+smoothing technique known as Zero Frequency :
+
+Zero Frequency is a smoothing technique used in Naive Bayes algorithm to avoid the problem of zero frequency, which occurs when a feature in the testing set has a value that was not observed in the training set.
+
+The Zero Frequency technique adds a small value (usually 1) to the count of each feature in the training set to avoid the problem of zero frequency.
+
+Smoothing techniques are used to reduce the impact of noisy or sparse data on the model.
+
+Smoothing techniques can be applied to various types of data, including text data in Natural Language Processing (NLP)
+
+Additive smoothing, also known as Laplace smoothing or Lidstone smoothing, is a commonly used smoothing technique in Naive Bayes algorithm.
+
+*******************************************************************************************
+
+Laplace estimation, also known as Laplace smoothing or add-one smoothing:
+
+All explanations are similar to Zero Frequency
+
+Laplace estimation is a simple and effective technique, but it may not work well for datasets with a large number of features or imbalanced classes.
+
+without Laplace smoothing because they can cause the model to make incorrect predictions.
+
+For example, suppose we have a dataset of emails and we want to classify them as spam or not based on the frequency of certain words in the email. If a word appears in the testing set that was not observed in the training set, the probability of that word given the class label will be zero, which will cause the overall probability of the class label to be zero as well
+This can lead to incorrect predictions, as the model will assign a probability of zero to a class label that may actually be the correct label
+
+For example, let's say we have a training set of 10 emails, and the word "free" appears in 5 of them. 
+When we apply Laplace smoothing with alpha=1, we add 1 to the count of each feature, so the count of "free" becomes 6. 
+We also add 1 to the count of all other features, even if they did not appear in the training set. 
+This ensures that the probability of any feature is never zero. 
+When we apply the Naive Bayes algorithm to the smoothed dataset, we can avoid the problem of zero probability and make accurate predictions on the testing set.
+
+*******************************************************************************************
+
+1- Laplace smoothing and zero smoothing are two techniques used in Naive Bayes algorithm to handle the problem of zero probability. 
+2- Laplace smoothing adds a small value to the count of each feature in the training set, 
+3- while zero smoothing replaces the zero probabilities with a small positive value. 
+4- Laplace smoothing is more commonly used than zero smoothing in Naive Bayes algorithm.
+
+*******************************************************************************************
+Laplace Smoothing:
+
+Laplace smoothing is a smoothing technique that adds a small value (usually 1) to the count of each feature in the training set to avoid the problem of zero probability
+Laplace smoothing is also known as add-one smoothing or Lidstone smoothing
+Laplace smoothing is a commonly used smoothing technique in Naive Bayes algorithm
+Laplace smoothing is used to represent the probability of a feature that was not observed in the training set
+Laplace smoothing is a simple and effective technique, but it may not work well for datasets with a large number of features or imbalanced classes
+
+
+Zero Smoothing:
+
+Zero smoothing is a smoothing technique that replaces the zero probabilities with a small positive value
+Zero smoothing is also known as zero-frequency smoothing or absolute discounting
+Zero smoothing is used to handle the problem of zero probability in the testing set
+Zero smoothing is less commonly used than Laplace smoothing in Naive Bayes algorithm
+
+*********************************************************************************************
+
+
+Naive Bayes is an essential algorithm in the data scientist's toolbox. Here's 1 week of research in 1 minute. Let's go:
+
+1. How it works: At its core, Naive Bayes uses Bayes' Theorem, which describes the probability of an event based on prior knowledge of conditions that might be related to the event.
+
+2. Strong Feature Independence Assumptions: Naive Bayes simplifies the calculation of probabilities by assuming that the features are independent of each other. This means the presence or absence of a particular feature in a class is unrelated to the presence or absence of any other feature.
+
+3. Classification: For classification tasks, Naive Bayes calculates the probability of each class given a set of input features. The class with the highest probability is then chosen as the prediction.
+
+4. The 3 Types of Naive Bayes: (1) Gaussian Naive Bayes: Assumes that features follow a normal distribution. (2) Multinomial Naive Bayes: Often used in document classification, where the features are the frequencies of the words or tokens. (3) Bernoulli Naive Bayes: Useful when features are binary (0s and 1s).
+
+5. Pros and Cons: It's simple, easy to implement, efficient with large datasets, and performs well with categorical input variables. The assumption of independent features is rarely true in real-world data, and it can perform poorly with correlated features.
+
+Pro-Tip: I use this as a baseline model (which means I try to beat it with other more sophisticated models like XGBoost). Naive Bayes is super-simple and fast (efficient) so it's a good place to start.
+
